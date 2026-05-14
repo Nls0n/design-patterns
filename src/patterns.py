@@ -162,7 +162,24 @@ class MenuCategory(MenuComponent):
 
 class RealApp:
     def render(self): 
-        return "<h1>Pizzeria Client UI</h1>"
+        return """
+        <html>
+            <head>
+                <style>
+                    body { font-family: sans-serif; background: #f4f4f4; padding: 50px; }
+                    .card { background: white; padding: 20px; border-radius: 8px; shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                    h1 { color: #e74c3c; }
+                </style>
+            </head>
+            <body>
+                <div class="card">
+                    <h1>Pizzeria Delivery System</h1>
+                    <p>Клиентская часть через паттерн Заместитель (Proxy) активна.</p>
+                    <a href="/docs">Перейти к API (Swagger)</a>
+                </div>
+            </body>
+        </html>
+        """
 
 class AppProxy:
     def __init__(self):
